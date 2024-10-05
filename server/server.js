@@ -28,13 +28,22 @@ app.use(morgan("dev"));
 
 
 
-app.use('/',(req,res)=>{
+// app.use('/',(req,res)=>{
 
-    res.status(200).json({message:"The server has been connected"})
+//     res.status(200).json({message:"The server has been connected"})
 
-})
+// })
 
 
+// import routes
+
+
+
+const AuthenticationRoutes = require("../routes/AuthenticationRoutes");
+
+
+
+app.use('/api/auth',AuthenticationRoutes)
 
 
 
